@@ -20,7 +20,7 @@ export const Header = () => {
 
         <div
           className={classNames(
-            "transition-visibility md:visible",
+            "transition-[visibility] md:visible",
             hamburgerMenuIsOpen ? "visible" : "invisible delay-500"
           )}
         >
@@ -32,9 +32,9 @@ export const Header = () => {
           >
             <ul
               className={classNames(
-                "flex h-full flex-col md:flex-row md:items-center [&_li]:ml-6 [&_li]:border-b [&_li]:border-grey-dark md:[&_li]:border-none",
-                "ease-in [&_a]:flex [&_a]:items-center [&_a]:h-navigation-height [&_a]:w-full [&_a]:text-md [&_a:hover]:text-grey [&_a]:transition-[color, transform] [&_a]:translate-y-8 [&_a]:duration-300 md:text-sm md:[&_a]:translate-y-0",
-                hamburgerMenuIsOpen && "[&_a]:translate-y-0"
+                "flex h-full flex-col md:flex-row md:items-center [&_li]:ml-6 [&_a]:border-b [&_a]:border-grey-dark md:[&_li]:border-none",
+                "ease-in [&_a]:flex [&_a]:h-navigation-height [&_a]:w-full [&_a]:translate-y-8 [&_a]:items-center [&_a]:text-md [&_a]:transition-[color,transform] [&_a]:duration-300 md:[&_a]:translate-y-1 md:[&_a]:text-sm [&_a:hover]:text-grey overflow-y-hidden",
+                hamburgerMenuIsOpen && "[&_a]:translate-y-1"
               )}
             >
               <li>
