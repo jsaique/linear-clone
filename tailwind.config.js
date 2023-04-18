@@ -75,7 +75,8 @@ module.exports = {
       },
     },
     animation: {
-      "fade-in": "fade-in 1000ms 0s ease",
+      // Adds delay to the animation
+      "fade-in": "fade-in 1000ms var(--animation-delay, 0ms) ease",
     },
   },
   plugins: [],

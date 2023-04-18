@@ -19,17 +19,17 @@ export default function Home() {
         >
           Introducing Linear Insights <IconWrapper>→</IconWrapper>
         </Button>
-        <HeroTitle className="animate-fade-in">
+        <HeroTitle className="animate-fade-in [--animation-delay:200ms] ">
           Linear is a better way
           <br className="hidden md:block" /> to build products
         </HeroTitle>
-        <HeroSubtitle className="animate-fade-in">
+        <HeroSubtitle className="animate-fade-in [--animation-delay:400ms]">
           Meet the new standard for modern software development.
           <br className="hidden md:block" /> Streamline issues, sprints, and
           product roadmaps.
         </HeroSubtitle>
         <Button
-          className="animate-fade-in"
+          className="animate-fade-in [--animation-delay:600ms]"
           href="/"
           variant="primary"
           size="large"
