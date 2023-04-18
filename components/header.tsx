@@ -31,7 +31,7 @@ export const Header = () => {
   }, [setHamburgerMenuIsOpen]);
 
   return (
-    <header className="fixed top-0 left-0 w-full border-b border-white-a08 backdrop-blur-[12px]">
+    <header className="fixed top-0 left-0 w-full border-b border-transparent-white backdrop-blur-[12px]">
       <Container className="flex h-navigation-height">
         <Link className="flex items-center" href="/">
           <Logo />
@@ -48,14 +48,14 @@ export const Header = () => {
               "h-[calc(100vh_-_var(--navigation-height))] fixed top-navigation-height left-0 w-full overflow-auto bg-background md:transition-opacity duration-500 md:relative md:top-0 md:block md:h-auto md:w-auto md:bg-transparent md:opacity-100 md:transition-none", //[md:translate-x-0]
               hamburgerMenuIsOpen //translate-x-0 prevents nav snap when resizing the screen [translate-x-0 opacity-100, translate-x-[-100vw] opacity-0]
                 ? "opacity-100"
-                : "opacity-0"
+                : "opacity-0 "
             )}
           >
             <ul
               className={classNames(
                 "flex h-full flex-col md:flex-row md:items-center [&_li]:ml-6 [&_a]:border-b [&_a]:border-grey-dark md:[&_li]:border-none",
-                "ease-in [&_a]:flex [&_a]:h-navigation-height [&_a]:w-full [&_a]:translate-y-8 [&_a]:items-center [&_a]:text-md [&_a]:transition-[color,transform] [&_a]:md:transition-colors [&_a]:duration-300 md:[&_a]:translate-y-1 md:[&_a]:text-sm [&_a:hover]:text-grey overflow-y-hidden",
-                hamburgerMenuIsOpen && "[&_a]:translate-y-1"
+                "ease-in [&_a]:flex [&_a]:h-navigation-height [&_a]:w-full [&_a]:translate-y-8 [&_a]:items-center [&_a]:text-lg [&_a]:transition-[color,transform] [&_a]:md:transition-colors [&_a]:duration-300 md:[&_a]:translate-y-[.01rem] md:[&_a]:text-md [&_a:hover]:text-grey overflow-y-hidden",
+                hamburgerMenuIsOpen && "[&_a]:translate-y-[.01rem]"
               )}
             >
               <li>
@@ -84,7 +84,10 @@ export const Header = () => {
         </div>
 
         <div className="flex items-center ml-auto h-full">
-          <Link href="#" className="text-sm mr-6 hover:text-grey">
+          <Link
+            href="#"
+            className="text-sm mr-6 hover:text-grey transition-colors ease-in"
+          >
             Log in
           </Link>
           <Button href="#">Sign up</Button>
