@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <Container className="pt-[6.4rem]">
+    <Container className="overflow-hidden py-[6.4rem]">
       <Hero>
         <Button
           className="animate-fade-in opacity-0 translate-y-[-1rem]"
